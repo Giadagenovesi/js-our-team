@@ -30,9 +30,14 @@ const teamMembers = [
         ruolo: "Graphic Designer",
         foto: "barbara-ramos-graphic-designer.jpg"
     },
-]
+];
+console.log(teamMembers);
 
 
 //Stampare su console le informazioni di nome, ruolo e la stringa della foto 
+for (let i = 0; i < teamMembers.length; i++) {
+    let curTeamMember = teamMembers[i];
+    console.log(curTeamMember.nome, curTeamMember.ruolo, curTeamMember.foto);
+}
 
 //Stampare le stesse informazioni su DOM sottoforma di stringhe
