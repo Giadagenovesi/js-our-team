@@ -35,9 +35,27 @@ console.log(teamMembers);
 
 
 //Stampare su console le informazioni di nome, ruolo e la stringa della foto 
+
+const cardContainer = document.querySelector(".row");
+// console.log(cardContainer);
+
+let memberCards = "";
 for (let i = 0; i < teamMembers.length; i++) {
     let curTeamMember = teamMembers[i];
     console.log(curTeamMember.nome, curTeamMember.ruolo, curTeamMember.foto);
+    //Stampare le stesse informazioni su DOM sottoforma di stringhe
+    //creo gli elementi che voglio inserire all' interno del html
+    memberCards += `
+            <div class="col">
+                <div class="card">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">${curTeamMember.nome}</li>
+                        <li class="list-group-item">${curTeamMember.ruolo} </li>
+                        <li class="list-group-item">${curTeamMember.foto} </li>
+                    </ul>
+                </div>
+            </div> 
+    `;
 }
-
-//Stampare le stesse informazioni su DOM sottoforma di stringhe
+// console.log(memberCards);
+cardContainer.innerHTML = memberCards;
