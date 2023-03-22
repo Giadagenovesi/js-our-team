@@ -45,14 +45,26 @@ for (let i = 0; i < teamMembers.length; i++) {
     console.log(curTeamMember.nome, curTeamMember.ruolo, curTeamMember.foto);
     //Stampare le stesse informazioni su DOM sottoforma di stringhe
     //creo gli elementi che voglio inserire all' interno del html
+    // memberCards += `
+    //         <div class="col">
+    //             <div class="card">
+    //                 <ul class="list-group list-group-flush">
+    //                     <li class="list-group-item">${curTeamMember.nome}</li>
+    //                     <li class="list-group-item">${curTeamMember.ruolo} </li>
+    //                     <li class="list-group-item">${curTeamMember.foto} </li>
+    //                 </ul>
+    //             </div>
+    //         </div> 
+    // `;
+
     memberCards += `
             <div class="col">
                 <div class="card">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">${curTeamMember.nome}</li>
-                        <li class="list-group-item">${curTeamMember.ruolo} </li>
-                        <li class="list-group-item">${curTeamMember.foto} </li>
-                    </ul>
+                    <img src="img/${curTeamMember.foto} " class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">${curTeamMember.nome}</h5>
+                        <p class="card-text">${curTeamMember.ruolo}</p>
+                    </div>
                 </div>
             </div> 
     `;
